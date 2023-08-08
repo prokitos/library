@@ -1,0 +1,19 @@
+Start testing: Aug 08 22:13 RTZ 2 (çèìà)
+----------------------------------------------------------
+1/1 Testing: fTest
+1/1 Test: fTest
+Command: "G:/projects/cplus/LIBRARY/cmake/build/Debug/cProject.exe"
+Directory: G:/projects/cplus/LIBRARY/cmake/build
+"fTest" start time: Aug 08 22:13 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+test
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"fTest" end time: Aug 08 22:13 RTZ 2 (çèìà)
+"fTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 08 22:13 RTZ 2 (çèìà)
