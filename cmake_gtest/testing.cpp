@@ -1,13 +1,14 @@
 #include <gtest/gtest.h>
 
-int main()
+
+
+TEST(HelloTest, BasicAssertions) 
 {
-    return 0;
+  EXPECT_EQ(7 * 6, 42);
 }
 
 
-// Demonstrate some basic assertions.
-TEST(HelloTest, BasicAssertions) {
-  EXPECT_EQ(7 * 6, 42);
-  EXPECT_TRUE(true);
+TEST(SecondTest, BasicAssertions) 
+{
+  EXPECT_EQ(7 * 8, 56);
 }

@@ -1,1 +1,5 @@
-set(  hello_test_TESTS)
+add_test([=[HelloTest.BasicAssertions]=]  G:/projects/cplus/LIBRARY/cmake_gtest/build/Debug/hello_test.exe [==[--gtest_filter=HelloTest.BasicAssertions]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[HelloTest.BasicAssertions]=]  PROPERTIES WORKING_DIRECTORY G:/projects/cplus/LIBRARY/cmake_gtest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[SecondTest.BasicAssertions]=]  G:/projects/cplus/LIBRARY/cmake_gtest/build/Debug/hello_test.exe [==[--gtest_filter=SecondTest.BasicAssertions]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SecondTest.BasicAssertions]=]  PROPERTIES WORKING_DIRECTORY G:/projects/cplus/LIBRARY/cmake_gtest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  hello_test_TESTS HelloTest.BasicAssertions SecondTest.BasicAssertions)

@@ -1,3 +1,6 @@
 fTest 1 0.0088579
 tests_NOT_BUILT 0 0
+HelloTest.BasicAssertions 9 0.00192754
+SecondTest.BasicAssertions 0 0
 ---
+SecondTest.BasicAssertions
