@@ -1,0 +1,10 @@
+^G:\PROJECTS\CPLUS\LIBRARY\CMAKE_GTEST\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/projects/cplus/LIBRARY/cmake_gtest -BG:/projects/cplus/LIBRARY/cmake_gtest/build --check-stamp-file G:/projects/cplus/LIBRARY/cmake_gtest/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

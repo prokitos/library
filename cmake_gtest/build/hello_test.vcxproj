@@ -370,6 +370,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="G:\projects\cplus\LIBRARY\cmake_gtest\testing.cpp" />
+    <ClCompile Include="G:\projects\cplus\LIBRARY\cmake_gtest\programm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="G:\projects\cplus\LIBRARY\cmake_gtest\build\ZERO_CHECK.vcxproj">

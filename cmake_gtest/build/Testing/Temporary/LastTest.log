@@ -1,10 +1,10 @@
-Start testing: Aug 09 21:06 RTZ 2 (çèìà)
+Start testing: Aug 09 21:10 RTZ 2 (çèìà)
 ----------------------------------------------------------
 1/2 Testing: HelloTest.BasicAssertions
 1/2 Test: HelloTest.BasicAssertions
 Command: "G:/projects/cplus/LIBRARY/cmake_gtest/build/Debug/hello_test.exe" "--gtest_filter=HelloTest.BasicAssertions" "--gtest_also_run_disabled_tests"
 Directory: G:/projects/cplus/LIBRARY/cmake_gtest/build
-"HelloTest.BasicAssertions" start time: Aug 09 21:06 RTZ 2 (çèìà)
+"HelloTest.BasicAssertions" start time: Aug 09 21:10 RTZ 2 (çèìà)
 Output:
 ----------------------------------------------------------
 Running main() from G:\projects\cplus\LIBRARY\cmake_gtest\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -23,7 +23,7 @@ Note: Google Test filter = HelloTest.BasicAssertions
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"HelloTest.BasicAssertions" end time: Aug 09 21:06 RTZ 2 (çèìà)
+"HelloTest.BasicAssertions" end time: Aug 09 21:10 RTZ 2 (çèìà)
 "HelloTest.BasicAssertions" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/2 Test: SecondTest.BasicAssertions
 Command: "G:/projects/cplus/LIBRARY/cmake_gtest/build/Debug/hello_test.exe" "--gtest_filter=SecondTest.BasicAssertions" "--gtest_also_run_disabled_tests"
 Directory: G:/projects/cplus/LIBRARY/cmake_gtest/build
-"SecondTest.BasicAssertions" start time: Aug 09 21:06 RTZ 2 (çèìà)
+"SecondTest.BasicAssertions" start time: Aug 09 21:10 RTZ 2 (çèìà)
 Output:
 ----------------------------------------------------------
 Running main() from G:\projects\cplus\LIBRARY\cmake_gtest\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -58,8 +58,8 @@ G:\projects\cplus\LIBRARY\cmake_gtest\testing.cpp(13): error: Expected equality 
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"SecondTest.BasicAssertions" end time: Aug 09 21:06 RTZ 2 (çèìà)
+"SecondTest.BasicAssertions" end time: Aug 09 21:10 RTZ 2 (çèìà)
 "SecondTest.BasicAssertions" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 09 21:06 RTZ 2 (çèìà)
+End testing: Aug 09 21:10 RTZ 2 (çèìà)

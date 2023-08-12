@@ -4,6 +4,9 @@
     <ClCompile Include="G:\projects\cplus\LIBRARY\cmake_gtest\testing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="G:\projects\cplus\LIBRARY\cmake_gtest\programm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="G:\projects\cplus\LIBRARY\cmake_gtest\CMakeLists.txt" />

@@ -1,0 +1,30 @@
+Start testing: Aug 12 19:03 RTZ 2 (çèìà)
+----------------------------------------------------------
+4/6 Testing: scoringWordFirst.BasicAssertions
+4/6 Test: scoringWordFirst.BasicAssertions
+Command: "G:/projects/cplus/LIBRARY/cmake_gtest/build/Debug/hello_test.exe" "--gtest_filter=scoringWordFirst.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: G:/projects/cplus/LIBRARY/cmake_gtest/build
+"scoringWordFirst.BasicAssertions" start time: Aug 12 19:03 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+Running main() from G:\projects\cplus\LIBRARY\cmake_gtest\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = scoringWordFirst.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from scoringWordFirst
+[ RUN      ] scoringWordFirst.BasicAssertions
+[       OK ] scoringWordFirst.BasicAssertions (0 ms)
+[----------] 1 test from scoringWordFirst (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"scoringWordFirst.BasicAssertions" end time: Aug 12 19:03 RTZ 2 (çèìà)
+"scoringWordFirst.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 12 19:03 RTZ 2 (çèìà)

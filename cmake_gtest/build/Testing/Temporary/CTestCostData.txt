@@ -1,6 +1,9 @@
 fTest 1 0.0088579
 tests_NOT_BUILT 0 0
-HelloTest.BasicAssertions 9 0.00192754
-SecondTest.BasicAssertions 0 0
+HelloTest.BasicAssertions 13 0.00195762
+SecondTest.BasicAssertions 4 0.0089884
+persistanceFirst.BasicAssertions 3 0.0113474
+persistanceSecond.BasicAssertions 1 0.0112038
+persistanceThird.BasicAssertions 1 0.0126724
+scoringWordFirst.BasicAssertions 1 0.0108844
 ---
-SecondTest.BasicAssertions
