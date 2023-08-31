@@ -1,0 +1,14 @@
+[
+{
+  "directory": "G:/projects/cplus/LIBRARY/cmake_multiple_bound/build",
+  "command": "G:\\programs\\msys\\mingw64\\bin\\g++.exe  @CMakeFiles/cProject.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\cProject.dir\\main.cpp.obj -c G:\\projects\\cplus\\LIBRARY\\cmake_multiple_bound\\main.cpp",
+  "file": "G:/projects/cplus/LIBRARY/cmake_multiple_bound/main.cpp",
+  "output": "CMakeFiles/cProject.dir/main.cpp.obj"
+},
+{
+  "directory": "G:/projects/cplus/LIBRARY/cmake_multiple_bound/build/test",
+  "command": "G:\\programs\\msys\\mingw64\\bin\\g++.exe  @CMakeFiles/test.dir/includes_CXX.rsp -g -std=gnu++14 -o CMakeFiles\\test.dir\\testing.cpp.obj -c G:\\projects\\cplus\\LIBRARY\\cmake_multiple_bound\\test\\testing.cpp",
+  "file": "G:/projects/cplus/LIBRARY/cmake_multiple_bound/test/testing.cpp",
+  "output": "test/CMakeFiles/test.dir/testing.cpp.obj"
+}
+]

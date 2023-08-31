@@ -1,0 +1,14 @@
+[
+{
+  "directory": "G:/projects/cplus/LIBRARY/cmake_multiple_unbound/build",
+  "command": "G:\\programs\\msys\\mingw64\\bin\\g++.exe   -g -std=gnu++14 -o CMakeFiles\\cProject.dir\\main.cpp.obj -c G:\\projects\\cplus\\LIBRARY\\cmake_multiple_unbound\\main.cpp",
+  "file": "G:/projects/cplus/LIBRARY/cmake_multiple_unbound/main.cpp",
+  "output": "CMakeFiles/cProject.dir/main.cpp.obj"
+},
+{
+  "directory": "G:/projects/cplus/LIBRARY/cmake_multiple_unbound/build/test",
+  "command": "G:\\programs\\msys\\mingw64\\bin\\g++.exe   -g -std=gnu++14 -o CMakeFiles\\cTest.dir\\testing.cpp.obj -c G:\\projects\\cplus\\LIBRARY\\cmake_multiple_unbound\\test\\testing.cpp",
+  "file": "G:/projects/cplus/LIBRARY/cmake_multiple_unbound/test/testing.cpp",
+  "output": "test/CMakeFiles/cTest.dir/testing.cpp.obj"
+}
+]

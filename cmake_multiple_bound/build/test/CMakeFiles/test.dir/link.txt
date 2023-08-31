@@ -1,0 +1,2 @@
+G:\programs\msys\mingw64\bin\ar.exe qc libtest.a CMakeFiles/test.dir/testing.cpp.obj
+G:\programs\msys\mingw64\bin\ranlib.exe libtest.a
