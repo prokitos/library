@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "windows-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "G:/programs/BoostCPP_build/include/boost-1_83",
+                "G:/programs/BoostCPP_build/lib"
+            ],
+            "compilerPath": "G:/programs/msys/mingw64/bin/g++.exe",
+            "cStandard": "${default}",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
