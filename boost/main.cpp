@@ -1,8 +1,11 @@
 #include "mainInstruction.h"
 #include "chars/matem.h"
+
 #include <boost/any.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/format.hpp>
+#include <boost/lambda/lambda.hpp>
+#include <boost/algorithm/cxx11/all_of.hpp>
 
 using namespace boost;
 
@@ -44,26 +47,48 @@ int main()
     //     cout <<(boost::format("%02d %02d %4d") % (days) % (m+1) % y) << "\n";
     // }
 
-    int nums = 10;
-    std::vector<int> vec;
-    vec.reserve(nums);
+    // int nums = 10;
+    // std::vector<int> vec;
+    // vec.reserve(nums);
 
-    for (size_t i = 0; i < nums; i++)
-    {
-        vec.push_back(rand() % 100);
-    }
+    // for (size_t i = 0; i < nums; i++)
+    // {
+    //     vec.push_back(rand() % 100);
+    // }
 
-    //std::sort(vec.begin(), vec.end(), [](const auto &a, const auto &b){return a > b;});
+    // //std::sort(vec.begin(), vec.end(), [](const auto &a, const auto &b){return a > b;});
+
+    // using namespace boost::lambda;
+    // std::sort(vec.begin(), vec.end(), _1 > _2); // работает нормально только с простыми типами. структуры и классы мимо
+
+    // for(const auto &a : vec)
+    //     std::cout << a << " " << std::endl;
+
+
+
+
+    std::string temp = "test stroka for tests";
+    std::cout << replace_first_copy(temp, " ", "-") << std::endl;
+    std::cout << replace_last_copy(temp, " ", "-") << std::endl;
+    std::cout << replace_all_copy(temp, " ", "-") << std::endl;
+    std::cout << std::endl << std::endl;
+
+
+    int mass[] = {2,3,4,5};
+    for(auto i : mass)
+        std::cout << i << " ";
 
     using namespace boost::lambda;
-    std::sort(vec.begin(), vec.end(), _1 > _2); // работает нормально только с простыми типами. структуры и классы мимо
+    //bool temps = boost::algorithm::all_of(mass, _1 > 1);
+    bool temps = boost::algorithm::all_of(mass, mass + 4, _1 > 1);
+    std::cout << std::endl;
+    if(temps == true)
+        std::cout << "all digits more then 1";
+    else
+        std::cout << "this mass has digit less then 1";
 
-    for(const auto &a : vec)
-        std::cout << a << " " << std::endl;
 
-
-
-
+    std::cout << std::endl << std::endl;
     cout << "end this";
     return 0;
 }
