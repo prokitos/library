@@ -36,13 +36,30 @@ int main()
     // for (int i = 0; i < vec.size(); i++)
     //     cout << vec[i] << " and ";  
 
-    int day_of_month[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    // int day_of_month[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    for(int y = 1950;y<2020;y++)
-    for(int m = 0;m<12;m++) {
-        int days =  day_of_month[m] + (m == 1 &&  ((!(y % 4) && (y % 100)) || !(y % 400)) ? 1 : 0);
-        cout <<(boost::format("%02d %02d %4d") % (days) % (m+1) % y) << "\n";
+    // for(int y = 1950;y<2020;y++)
+    // for(int m = 0;m<12;m++) {
+    //     int days =  day_of_month[m] + (m == 1 &&  ((!(y % 4) && (y % 100)) || !(y % 400)) ? 1 : 0);
+    //     cout <<(boost::format("%02d %02d %4d") % (days) % (m+1) % y) << "\n";
+    // }
+
+    int nums = 10;
+    std::vector<int> vec;
+    vec.reserve(nums);
+
+    for (size_t i = 0; i < nums; i++)
+    {
+        vec.push_back(rand() % 100);
     }
+
+    //std::sort(vec.begin(), vec.end(), [](const auto &a, const auto &b){return a > b;});
+
+    using namespace boost::lambda;
+    std::sort(vec.begin(), vec.end(), _1 > _2); // работает нормально только с простыми типами. структуры и классы мимо
+
+    for(const auto &a : vec)
+        std::cout << a << " " << std::endl;
 
 
 
