@@ -6,6 +6,10 @@
 #include <boost/format.hpp>
 #include <boost/lambda/lambda.hpp>
 #include <boost/algorithm/cxx11/all_of.hpp>
+#include <boost/date_time.hpp>
+#include <boost/multiprecision/cpp_int.hpp>
+#include "boost/lexical_cast.hpp"
+#include "boost/filesystem.hpp"
 
 using namespace boost;
 
@@ -63,8 +67,41 @@ int main()
 
     // for(const auto &a : vec)
     //     std::cout << a << " " << std::endl;
+    
+
+    // std::string temp = "test stroka for tests";
+    // std::cout << replace_first_copy(temp, " ", "-") << std::endl;
+    // std::cout << replace_last_copy(temp, " ", "-") << std::endl;
+    // std::cout << replace_all_copy(temp, " ", "-") << std::endl;
+    // std::cout << std::endl << std::endl;
 
 
+    // int mass[] = {2,3,4,5};
+    // for(auto i : mass)
+    //     std::cout << i << " ";
+
+    // using namespace boost::lambda;
+    // //bool temps = boost::algorithm::all_of(mass, _1 > 1);
+    // bool temps = boost::algorithm::all_of(mass, mass + 4, _1 > 1);
+    // std::cout << std::endl;
+    // if(temps == true)
+    //     std::cout << "all digits more then 1";
+    // else
+    //     std::cout << "this mass has digit less then 1";
+
+    //boost::gregorian::date TestTime(1941, 5, 22);
+    //int day = boost::gregorian::gregorian_calendar::day_of_week(boost::gregorian::date::ymd_type(1941, 5, 22));
+    //std::cout << (day);  // можно добавить метод который преобразовывает число в название дней недели.
+    //boost::multiprecision::int1024_t tem = 123623436536326;
+
+    int s = 23;
+    std::string s1 = lexical_cast<string>(s);
+
+    int a1 = s1[0];
+    int a2 = lexical_cast<int>(s1[0]);
+
+    cout << "normal " << a1 << endl;
+    cout << "boost  " << a2 << endl;
 
 
     std::string temp = "test stroka for tests";
@@ -78,6 +115,7 @@ int main()
     for(auto i : mass)
         std::cout << i << " ";
 
+    
     using namespace boost::lambda;
     //bool temps = boost::algorithm::all_of(mass, _1 > 1);
     bool temps = boost::algorithm::all_of(mass, mass + 4, _1 > 1);
@@ -87,6 +125,7 @@ int main()
     else
         std::cout << "this mass has digit less then 1";
 
+    
 
     std::cout << std::endl << std::endl;
     cout << "end this";
