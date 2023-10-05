@@ -4,6 +4,7 @@
 #include <cmath>
 #include <iostream>
 #include <algorithm>
+#include "simpleTimer.h"
 
 void consoleClear()
 {
@@ -16,6 +17,36 @@ void consoleClear()
 }
 
 std::mutex mutt;
+std::recursive_mutex recmutt;
+
+void recFun(int x)
+{
+    // локальные пред вычисления, которым не нужна синхронизация.
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    // функция лочится
+    recmutt.lock();
+
+    // вывод числа
+    std::cout << x << " ";
+
+    // если дошло до 0. анлок и выход из всех рекурсий.
+    if(x < 1)
+    {
+        std::cout << " end " << std::endl;
+        recmutt.unlock();
+        return;
+    }
+
+    // вызов рекурсивной функции
+    recFun(x - 1);
+
+    // функция анлочится при выходе из рекурсий
+    recmutt.unlock();
+
+    // локальные вычисления в конце после каждой итерации
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+}
 
 
 void simple_thread_one()
@@ -152,10 +183,24 @@ int main()
         // classLambdaTwo.join();
 
     // lockGuard в потоках. помощь при использовании мьютекса.
-        std::thread t_name1(lockGuardTest);
-        std::thread t_name2(lockGuardTest);
-        t_name1.join();
-        t_name2.join();
+        // std::thread t_name1(lockGuardTest);
+        // std::thread t_name2(lockGuardTest);
+        // t_name1.join();
+        // t_name2.join();
+
+    SimpleTimer xeee;
+    // recursive mutex.
+        // std::thread t_name1(recFun,4);
+        // std::thread t_name2(recFun,4);
+        // t_name1.join();
+        // t_name2.join();
+        // time = 8.800
+
+        // recFun(4);
+        // recFun(4); 
+        // time = 9.901
+        // выйгрыш по времени из за того что 1 поток анлочит мьютекс, и без ожидания 500мс начинается второй поток.
+
 
     return 0;
 }
