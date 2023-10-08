@@ -138,6 +138,22 @@ void lockGuardTest()
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 }
 
+void UniqLockTest()
+{
+    std::unique_lock<std::mutex> uniqlock(mutt,std::defer_lock);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+    uniqlock.lock();    // если убрать дефер лок, то залочится автоматом при создании юникЛок
+    std::cout << "work thread start" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::cout << "work thread end" << std::endl;
+    uniqlock.unlock();
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
+
+
 
 int main()
 {
@@ -188,7 +204,9 @@ int main()
         // t_name1.join();
         // t_name2.join();
 
+    // замер времени
     SimpleTimer xeee;
+
     // recursive mutex.
         // std::thread t_name1(recFun,4);
         // std::thread t_name2(recFun,4);
@@ -201,6 +219,11 @@ int main()
         // time = 9.901
         // выйгрыш по времени из за того что 1 поток анлочит мьютекс, и без ожидания 500мс начинается второй поток.
 
+    // uniq lock mutex
+        std::thread t_name1(UniqLockTest);
+        std::thread t_name2(UniqLockTest);
+        t_name1.join();
+        t_name2.join();
 
     return 0;
 }
