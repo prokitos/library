@@ -4,6 +4,7 @@
 #include <cmath>
 #include <iostream>
 #include <algorithm>
+#include <semaphore>
 #include "simpleTimer.h"
 
 void consoleClear()
@@ -18,6 +19,7 @@ void consoleClear()
 
 std::mutex mutt;
 std::recursive_mutex recmutt;
+std::counting_semaphore<0> semph(2);
 
 void recFun(int x)
 {
@@ -155,6 +157,21 @@ void UniqLockTest()
 
 
 
+void workSemaphor(int i)
+{
+    semph.acquire();
+
+    std::cout << "start " << i;
+    std::cout << std::endl;
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+
+    std::cout << "end " << i;
+    std::cout << std::endl;
+
+    semph.release();
+}
+
 int main()
 {
     consoleClear();
@@ -220,10 +237,17 @@ int main()
         // выйгрыш по времени из за того что 1 поток анлочит мьютекс, и без ожидания 500мс начинается второй поток.
 
     // uniq lock mutex
-        std::thread t_name1(UniqLockTest);
-        std::thread t_name2(UniqLockTest);
-        t_name1.join();
-        t_name2.join();
+        // std::thread t_name1(UniqLockTest);
+        // std::thread t_name2(UniqLockTest);
+        // t_name1.join();
+        // t_name2.join();
+
+    std::thread t1(workSemaphor, 1); 
+    std::thread t2(workSemaphor, 2); 
+    std::thread t3(workSemaphor, 3); 
+    t1.join(); 
+    t2.join(); 
+    t3.join(); 
 
     return 0;
 }
